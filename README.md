@@ -1,6 +1,9 @@
 ## MERN Authentication system Basic
 
-This is a basic mern authentication system which has 4 routes
+
+![](./client/structure/structure.png)
+
+### This is a basic mern authentication system which has 4 routes
 
 1. Login
 1. Register
@@ -14,3 +17,5 @@ This is a basic mern authentication system which has 4 routes
 - If the token is invalid/expired user is not allowed to view the dashboard page.
 
 - After log in if the user tries to visit the login page again they are redirected back to the dashboard
+
+Schema design tool miro,sqldbm
