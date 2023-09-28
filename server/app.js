@@ -79,6 +79,7 @@ app.post("/login",async(res,req)=>{
     console.log(error);
   }
 })
+res.status(400).send("email or password is incorrect");
 
 
 module.exports = app;
