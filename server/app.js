@@ -30,15 +30,19 @@ app.post("/signup", async(req,res)=>{
      
     const myEncyPassword =  await bcrypt.hash(password,10)
      
-    const newUser = await User.create({
+    const user = await User.create({
       firstname,
       lastname,
       email,
       password: myEncyPassword
     })
 
-    
+    const token = jwt.sign({
+      id: user._id, email
+    },"shhhhh", {expiresIn: "2h"})
 
+    user.token = token
+    user.password = undefined
 
 })
 
